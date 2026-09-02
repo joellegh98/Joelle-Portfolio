@@ -12,6 +12,7 @@ const Intro = () => {
         <AsciiPortrait />
       </div>
       <div className="intro-block">
+        <div className="intro-eyebrow">Software Engineer</div>
         <div className="intro-title">
           {"hi, "}
           <span className="intro-name">

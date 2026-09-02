@@ -37,8 +37,9 @@ const About = () => {
   return (
     <div id="about">
       <FadeInSection>
-        <div className="section-header ">
-          <span className="section-title">/ about me</span>
+        <div className="section-header">
+          <span className="section-eyebrow">01</span>
+          <h2 className="section-title">About</h2>
         </div>
         <div className="about-content">
           <div className="about-description">

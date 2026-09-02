@@ -29,8 +29,11 @@ const projects = {
 const Projects = () => {
   return (
     <div id="projects">
-      <div className="section-header ">
-        <span className="section-title">/ software</span>
+      <div className="section-header projects-header">
+        <div className="section-header-text">
+          <span className="section-eyebrow">03</span>
+          <h2 className="section-title">Software</h2>
+        </div>
         <a
           href="https://github.com/joellegh98"
           className="explore-link"

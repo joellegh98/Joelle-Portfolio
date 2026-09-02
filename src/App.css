@@ -29,9 +29,9 @@
 }
 
 .App {
-  font-family: "NTR";
-  background-color: var(--navy);
-  color: var(--lightest-slate);
+  font-family: "Inter";
+  background-color: var(--bg);
+  color: var(--text);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -46,11 +46,11 @@
 
 a {
   text-decoration: none !important;
-  color: var(--green-bright);
+  color: var(--accent);
 }
 
 a:hover {
-  color: var(--lightest-slate);
+  color: var(--text);
 }
 
 #content {
@@ -62,7 +62,7 @@ a:hover {
 }
 
 ::selection {
-  background: var(--lightest-navy);
+  background: var(--border);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -80,25 +80,40 @@ a:hover {
 
 .section-header {
   display: flex;
-  padding-bottom: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding-bottom: 36px;
   width: 100%;
+}
+
+.section-eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.section-title {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--text-bright);
+  font-size: 44px;
+  line-height: 1.15;
+  margin: 0;
 }
 
 .section-header::after {
   content: "";
   display: block;
-  width: 300px;
-  margin-top: 39px;
-  height: 1px;
-  margin-left: 20px;
-  background-color: var(--lightest-navy);
-}
-
-.section-title {
-  font-family: "NTR", sans-serif;
-  color: var(--lightest-slate);
-  font-size: 46px;
-  font-weight: bold;
+  width: 56px;
+  height: 3px;
+  margin-top: 12px;
+  background-color: var(--accent);
+  border-radius: 2px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -114,10 +129,6 @@ a:hover {
 
   .section-header {
     width: unset;
-  }
-
-  .section-header::after {
-    display: none;
   }
 
   .section-title {

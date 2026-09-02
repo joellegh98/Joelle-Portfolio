@@ -233,7 +233,7 @@ const AsciiPortrait = () => {
         p.x += p.vx;
         p.y += p.vy;
 
-        ctx.fillStyle = `rgba(100, 255, 218, ${p.currentAlpha})`;
+        ctx.fillStyle = `rgba(224, 138, 79, ${p.currentAlpha})`;
         ctx.fillText(p.char, p.x, p.y);
       });
     };

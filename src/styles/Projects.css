@@ -24,14 +24,14 @@
   position: relative;
   height: 100%;
   padding: 2rem 1.75rem;
-  background-color: var(--light-navy);
+  background-color: var(--bg-elevated);
   border-radius: 16px;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .projects-card:hover {
   transform: translateY(-7px);
-  background-color: var(--lightest-navy);
+  background-color: var(--border);
 }
 
 .project-card-link {
@@ -46,15 +46,20 @@
   color: inherit !important;
 }
 
-#projects .section-header {
-  align-items: center;
+.projects-header {
+  flex-direction: row;
+  align-items: flex-end;
   justify-content: space-between;
 }
 
-#projects .section-header::after {
-  order: 1;
-  flex-grow: 1;
-  width: auto;
+.projects-header::after {
+  display: none;
+}
+
+.section-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 
@@ -67,15 +72,15 @@
   border-bottom: none !important;
 }
 .folder-icon {
-  color: var(--green-bright);
+  color: var(--accent);
 }
 
 .explore-link {
   order: 2;
   margin-left: 20px;
-  font-family: "NTR", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
-  color: var(--green-bright);
+  color: var(--accent);
   text-decoration: none;
   transition: all 0.25s ease;
   white-space: nowrap;
@@ -84,7 +89,7 @@
 }
 
 .explore-link:hover {
-  color: var(--lightest-slate) !important;
+  color: var(--text) !important;
   transform: translateX(5px);
 }
 
@@ -98,7 +103,7 @@
   margin-top: 6px;
 }
 .github-icon:hover {
-  color: var(--green-bright);
+  color: var(--accent);
 }
 
 .open-icon {
@@ -106,16 +111,17 @@
 }
 
 .card-title {
-  font-family: "NTR", sans-serif;
-  color: var(--lightest-slate);
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  color: var(--text-bright);
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 
 .card-desc {
-  font-family: "NTR", sans-serif;
-  color: var(--slate);
+  font-family: "Inter", sans-serif;
+  color: var(--text-muted);
   font-size: 18px;
   padding-bottom: 40px;
 }
@@ -124,10 +130,10 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: "NTR", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
-  color: var(--green-bright);
-  border: 1px solid var(--green-bright);
+  color: var(--accent);
+  border: 1px solid var(--accent);
   border-radius: 4px;
   padding: 4px 10px;
   text-decoration: none;
@@ -136,12 +142,12 @@
 }
 
 .project-badge:hover {
-  background: rgba(100, 255, 218, 0.08);
+  background: rgba(224, 138, 79, 0.08);
 }
 
 .card-tech {
-  font-family: "NTR", sans-serif;
-  color: var(--slate);
+  font-family: "Inter", sans-serif;
+  color: var(--text-muted);
   font-size: 16px;
 }
 
@@ -177,7 +183,7 @@
 }
 
 .carousel-caption {
-  font-family: "NTR", sans-serif;
+  font-family: "Inter", sans-serif;
   max-width: 500px;
   right: unset !important;
   left: 25% !important;
@@ -185,27 +191,29 @@
 }
 
 .carousel-caption h3 {
+  font-family: "Fraunces", serif;
+  font-style: italic;
   font-size: 38px;
-  font-weight: bold;
-  color: var(--lightest-slate);
+  font-weight: 600;
+  color: var(--text-bright);
 }
 
 .carousel-caption p {
-  font-family: "NTR", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
   font-size: 18px;
-  color: var(--lightest-slate);
+  color: var(--text);
 }
 
 .carousel-caption p.techStack {
-  font-family: "NTR", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: bold;
-  color: var(--green-bright);
+  color: var(--accent);
 }
 
 .carousel-indicators .active {
-  background-color: var(--green-bright);
+  background-color: var(--accent);
 }
 
 @media only screen and (max-width: 600px) {
@@ -238,15 +246,10 @@
     padding: 60px 20px;
   }
 
-  #projects .section-header {
+  .projects-header {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
-
-  #projects .section-header::after {
-    display: none;
-  }
-
 
   .explore-link {
     width: 100%;

@@ -9,10 +9,10 @@ import { useMediaQuery } from "@mui/material";
 const SidebarNav = () => {
   const isMobile = useMediaQuery("(max-width: 800px)");
   const links = [
-    <a key="1" href={withBase("/#intro")}><span className="nav-slash">/</span>home</a>,
-    <a key="2" href={withBase("/#about")}><span className="nav-slash">/</span>about</a>,
-    <a key="3" href={withBase("/#experience")}><span className="nav-slash">/</span>experience</a>,
-    <a key="4" href={withBase("/#projects")}><span className="nav-slash">/</span>software</a>
+    <a key="1" href={withBase("/#intro")}><span className="nav-dot" />home</a>,
+    <a key="2" href={withBase("/#about")}><span className="nav-dot" />about</a>,
+    <a key="3" href={withBase("/#experience")}><span className="nav-dot" />experience</a>,
+    <a key="4" href={withBase("/#projects")}><span className="nav-dot" />software</a>
   ];
 
   return (
