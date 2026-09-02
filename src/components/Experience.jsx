@@ -7,8 +7,9 @@ const Experience = () => {
   return (
     <div id="experience">
       <FadeInSection>
-        <div className="section-header ">
-          <span className="section-title">/ experience</span>
+        <div className="section-header">
+          <span className="section-eyebrow">02</span>
+          <h2 className="section-title">Experience</h2>
         </div>
         <JobList />
       </FadeInSection>
