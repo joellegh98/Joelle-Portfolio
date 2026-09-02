@@ -2,7 +2,11 @@
   Joelle Gharo — Portfolio
 </h1>
 <p align="center">
-  My personal portfolio site, built with Vite, React 19, Material UI, and Bootstrap 5.
+  My personal portfolio site 
+  <a href="https://joellegh98.github.io/Joelle-Portfolio/" target="_blank">
+    https://joellegh98.github.io/Joelle-Portfolio/
+  </a>,
+  built with Vite, React 19, Material UI, and Bootstrap 5.
 </p>
 
 ## 🛠 set-up
